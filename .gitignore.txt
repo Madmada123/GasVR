@@ -1,0 +1,15 @@
+.vs/
+Library/
+Logs/
+Temp/
+obj/
+*.csproj
+*.sln
+*.user
+*.apk
+*.exe
+*.pdb
+*.pidb
+*.unityproj
+*.vsconfig
+UserSettings/
