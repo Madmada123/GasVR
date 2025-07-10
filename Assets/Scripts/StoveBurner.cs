@@ -1,40 +1,40 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class StoveBurner : MonoBehaviour
 {
-    [Header("Ссылки")]
-    [SerializeField] private TurnGas gasValve; // Ссылка на объект газа (вентиль)
-    [SerializeField] private ParticleSystem[] flameEffects; // Все огни конфорки
-    [SerializeField] private CheckWin checkWin;
-    [SerializeField] private float delayBeforeWinUI = 2f; // секунда-другая паузы
+    [Header("References")]
+    [SerializeField] private TurnGas gasValve;
+    [SerializeField] private ParticleSystem[] flameEffects;
+    [SerializeField] private WinUIActivator WinUIActivator;
+    [SerializeField] private float delayBeforeWinUI = 2f;
 
     private bool isIgnited = false;
 
     private void Start()
     {
-        // На всякий случай гасим все огни при старте
+        // Ensure all flames are off at the start
         foreach (var effect in flameEffects)
         {
-            if (effect != null)
-            {
-                effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
+            effect?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Проверка уже сработавшего воспламенения
-        if (isIgnited) return;
+        // Skip if already ignited
+        if (isIgnited || !other.TryGetComponent(out Match match)) return;
 
-        // Проверяем: горящая ли это спичка?
-        Match match = other.GetComponent<Match>();
-        if (match != null && match.IsLit && gasValve != null && gasValve.IsGasOn)
+        if (match.IsLit && gasValve?.IsGasOn == true)
         {
+            Debug.Log("[StoveBurner] Lit match detected and gas is on. Igniting...");
             Ignite();
         }
-
-       
+        else
+        {
+            Debug.Log("[StoveBurner] Conditions not met: either match is not lit or gas is off.");
+        }
     }
 
     private void Ignite()
@@ -49,20 +49,19 @@ public class StoveBurner : MonoBehaviour
             }
         }
 
-        Debug.Log("[StoveBurner] Конфорка успешно зажжена!");
+        Debug.Log("[StoveBurner] Burner successfully ignited.");
 
-        //Отложенный вызов UI
-        if (checkWin != null)
+        if (WinUIActivator != null)
         {
-            Invoke(nameof(TriggerWinUI), delayBeforeWinUI);
+            StartCoroutine(TriggerWinUIDelayed());
         }
     }
 
-    private void TriggerWinUI()
+    private IEnumerator TriggerWinUIDelayed()
     {
-        checkWin.ShowWinUI();            //Пасхалочка для код ревью, мне нравится ваш эйчар Альмира или как правильно Алмира?
+        yield return new WaitForSeconds(delayBeforeWinUI);
+        WinUIActivator.ShowWinUI();
     }
 
-
-
+    public bool IsIgnited => isIgnited;
 }

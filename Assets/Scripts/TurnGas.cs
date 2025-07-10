@@ -2,82 +2,47 @@ using UnityEngine;
 
 public class TurnGas : MonoBehaviour
 {
-    [Header("Настройки газа")]
-    public bool isGasOn = false;
-    [SerializeField] private float activationAngle = 45f; // угол, с которого начинается подача газа
-    [SerializeField] private float maxGasAngle = 120f;    // максимум подачи газа
+    // === Public Property ===
+    [field: SerializeField]
+    public bool IsGasOn { get; private set; }
 
-    [Header("Эффекты")]
+    // === Configuration ===
+    [SerializeField] private float activationAngle = 45f;
+    [SerializeField] private float maxGasAngle = 120f;
+
+    // === Effects ===
     [SerializeField] private ParticleSystem gasParticles;
     [SerializeField] private AudioSource gasSound;
 
+    // === Internal State ===
     private float startZ;
-    private ParticleSystem.EmissionModule emission;
 
-    void Start() // Уважаемый лид который проверяет код и делает ревью, у меня есть кое-что(я все это сделал за 2 часа  54 минут 34 секунд) псссс это серезьно))))
+    private void Start()
     {
         startZ = transform.localEulerAngles.z;
 
-        if (gasParticles != null)
-        {
-            emission = gasParticles.emission;
-            emission.rateOverTime = 0f;
-            gasParticles.Stop();
-        }
-
-        if (gasSound != null)
-        {
-            gasSound.volume = 0f;
-            gasSound.loop = true;
-            gasSound.playOnAwake = false;
-        }
+        gasParticles?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        gasSound?.Stop();
     }
 
-    void Update()
+    private void Update()
     {
-        float currentZ = transform.localEulerAngles.z;
-        float deltaAngle = Mathf.DeltaAngle(startZ, currentZ);
-        float absDelta = Mathf.Abs(deltaAngle);
+        float absAngle = Mathf.Abs(Mathf.DeltaAngle(startZ, transform.localEulerAngles.z));
+        bool shouldBeOn = absAngle >= activationAngle && absAngle <= maxGasAngle;
 
-        // Подача газа
-        isGasOn = absDelta >= activationAngle;
-
-        // Интенсивность газа от 0 до 1
-        float intensity = Mathf.InverseLerp(activationAngle, maxGasAngle, absDelta);
-        intensity = Mathf.Clamp01(intensity);
-
-        // Управление частицами
-        if (gasParticles != null)
+        if (shouldBeOn && !IsGasOn)
         {
-            if (isGasOn)
-            {
-                if (!gasParticles.isPlaying) gasParticles.Play();
-                emission.rateOverTime = Mathf.Lerp(5f, 50f, intensity);
-            }
-            else
-            {
-                emission.rateOverTime = 0f;
-                if (gasParticles.isPlaying) gasParticles.Stop();
-            }
+            IsGasOn = true;
+            gasParticles?.Play();
+            gasSound?.Play();
+            Debug.Log("[TurnGas] Gas turned ON.");
         }
-
-        // Управление звуком
-        if (gasSound != null)
+        else if (!shouldBeOn && IsGasOn)
         {
-            if (isGasOn)
-            {
-                if (!gasSound.isPlaying) gasSound.Play();
-                gasSound.volume = intensity;
-                // gasSound.pitch = Mathf.Lerp(0.8f, 1.2f, intensity); // опционально
-            }
-            else
-            {
-                gasSound.volume = 0f;
-                if (gasSound.isPlaying) gasSound.Stop();
-            }
+            IsGasOn = false;
+            gasParticles?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            gasSound?.Stop();
+            Debug.Log("[TurnGas] Gas turned OFF.");
         }
     }
-
-    public bool IsGasOn => isGasOn;
-
 }

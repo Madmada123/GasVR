@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Madi\\GasVR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|c:\\users\\madi\\gasvr\\assets\\scripts\\stoveburner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stoveburner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|c:\\users\\madi\\gasvr\\assets\\scripts\\checkwin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\checkwin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|C:\\Users\\Madi\\GasVR\\assets\\scripts\\winuiactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\winuiactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|C:\\Users\\Madi\\GasVR\\assets\\scripts\\turngas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|C:\\Users\\Madi\\GasVR\\assets\\scripts\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|C:\\Users\\Madi\\GasVR\\assets\\scripts\\stoveburner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stoveburner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|c:\\users\\madi\\gasvr\\assets\\quickoutline\\scripts\\outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\quickoutline\\scripts\\outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|c:\\users\\madi\\gasvr\\assets\\scripts\\xroutlinehighlighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518DA66A-914D-8DB2-F467-076FA11DB978}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\xroutlinehighlighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CheckWin.cs",
-              "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\CheckWin.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CheckWin.cs",
-              "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\CheckWin.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CheckWin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB7AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Outline.cs",
+              "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\QuickOutline\\Scripts\\Outline.cs",
+              "RelativeDocumentMoniker": "Assets\\QuickOutline\\Scripts\\Outline.cs",
+              "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\QuickOutline\\Scripts\\Outline.cs",
+              "RelativeToolTip": "Assets\\QuickOutline\\Scripts\\Outline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T14:56:30.558Z",
+              "WhenOpened": "2025-07-09T11:34:52.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "XROutlineHighlighter.cs",
+              "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\XROutlineHighlighter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\XROutlineHighlighter.cs",
+              "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\XROutlineHighlighter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\XROutlineHighlighter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T09:05:43.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WinUIActivator.cs",
+              "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\WinUIActivator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WinUIActivator.cs",
+              "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\WinUIActivator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WinUIActivator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T16:29:56.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "StoveBurner.cs",
               "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\StoveBurner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StoveBurner.cs",
               "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\StoveBurner.cs",
               "RelativeToolTip": "Assets\\Scripts\\StoveBurner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAB9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T14:21:10.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Match.cs",
               "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\Match.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Match.cs",
               "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\Match.cs",
               "RelativeToolTip": "Assets\\Scripts\\Match.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACcAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T11:51:24.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TurnGas.cs",
               "DocumentMoniker": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\TurnGas.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TurnGas.cs",
               "ToolTip": "C:\\Users\\Madi\\GasVR\\Assets\\Scripts\\TurnGas.cs",
               "RelativeToolTip": "Assets\\Scripts\\TurnGas.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAACiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T11:16:11.463Z",
               "EditorCaption": ""
